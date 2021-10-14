@@ -1,4 +1,5 @@
 import React from "react";
+import { Typography } from "@mui/material";
 
 // Home Page
 // -Intro Video
@@ -8,7 +9,12 @@ import React from "react";
 const Home = () => {
     return(
         <div className="home">
-            Home Page
+            <Typography variant="h1" color="primary">
+                Home Page
+            </Typography>
+            <Typography variant="h2" color="secondary">
+                Welcome
+            </Typography>
         </div>
     )
 }
