@@ -2,6 +2,7 @@ import React from 'react';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Home from './components/Home';
 
 const App = () => {
     return(
@@ -10,7 +11,7 @@ const App = () => {
                 <Header />
             </div>
             <div className="main">
-                This is main
+                <Home />
             </div>
             <div className="footer">
                 <Footer />
