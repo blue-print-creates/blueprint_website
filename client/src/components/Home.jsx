@@ -10,21 +10,23 @@ const cards = [1, 2, 3];
 const Home = () => {
     return(
         <div className="home">
-            <Container maxWidth="lg" style={{marginTop:'100px'}}>
-                <Container maxWidth="lg" style={{border: "25px solid orange", marginBottom: "40px"}}>
+            <div  style={{marginTop:'5px'}}>
+                <div style={{boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px", marginBottom: "20px"}}>
                     <Slider/>
-                </Container>
+                </div>
+            </div>
 
-                <Grid container spacing={4}>
+            <Container>
+                <Grid container spacing={2}>
                     {cards.map((card) => (
                         <Grid item key={card} xs={12} sm={6} md={4}>
-                            <Card sx={{ maxWidth: 345 }}>
+                            <Card sx={{ maxWidth: 345, boxShadow: " rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px"}}>
                             <CardActionArea>
                                 <CardMedia
-                                component="img"
-                                height="240"
-                                image="https://source.unsplash.com/1280x720/?lamborghini'"
-                                alt="Cars"
+                                    component="img"
+                                    height="240"
+                                    image="https://source.unsplash.com/1280x720/?lamborghini'"
+                                    alt="Cars"
                                 />
                                 <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">

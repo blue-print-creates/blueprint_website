@@ -1,32 +1,33 @@
 import * as React from 'react';
 import { useTheme, Box, MobileStepper, Paper, Typography, Button} from "@mui/material";
-import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
+import ArrowLeft from '@mui/icons-material/ArrowLeft';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
-    label: 'San Francisco – Oakland Bay Bridge, United States',
+    label: 'Cars',
     imgPath:
-      'https://source.unsplash.com/1280x720/?cars',
+      'https://source.unsplash.com/1920x620/?cars',
   },
   {
-    label: 'Bird',
+    label: 'Mechanics',
     imgPath:
-      'https://source.unsplash.com/1280x720/?mechanics',
+      'https://source.unsplash.com/1920x620/?mechanics',
   },
   {
-    label: 'Bali, Indonesia',
+    label: 'Tesla',
     imgPath:
-      'https://source.unsplash.com/1280x720/?tesla',
+      'https://source.unsplash.com/1920x620/?tesla',
   },
   {
-    label: 'Goč, Serbia',
+    label: 'Ferrari',
     imgPath:
-      'https://source.unsplash.com/1280x720/?ferrari',
+      'https://source.unsplash.com/1920x620/?ferrari',
   },
 ];
 
@@ -48,20 +49,7 @@ function SwipeableTextMobileStepper() {
   };
 
   return (
-    <Box lg={{ maxWidth: 400, flexGrow: 1 }}>
-      <Paper
-        square
-        elevation={0}
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          height: 40,
-          pl: 2,
-          bgcolor: 'background.default',
-        }}
-      >
-        <Typography>{images[activeStep].label}</Typography>
-      </Paper>
+    <Box>
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
@@ -73,12 +61,12 @@ function SwipeableTextMobileStepper() {
             {Math.abs(activeStep - index) <= 2 ? (
               <Box
                 component="img"
-                sx={{
-                  height: 600,
-                  display: 'block',
-                  maxWidth: 1280,
+                style={{
+                  display: 'flex',
+                  padding: '0%',
+                  margin: '0%',
+                  alignItems: 'center',
                   overflow: 'hidden',
-                  borderShadow: 1,
                   backgroundColor: 'primary.light',
                   '&:hover': {
                     backgroundColor: 'primary.main',
@@ -102,22 +90,22 @@ function SwipeableTextMobileStepper() {
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1}
           >
-            Next
+            {/* Next */}
             {theme.direction === 'rtl' ? (
-              <KeyboardArrowLeft />
+              <ArrowLeftIcon />
             ) : (
-              <KeyboardArrowRight />
+              <ArrowRightIcon />
             )}
           </Button>
         }
         backButton={
           <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
             {theme.direction === 'rtl' ? (
-              <KeyboardArrowRight />
+              <ArrowRightIcon />
             ) : (
-              <KeyboardArrowLeft />
+              <ArrowLeft />
             )}
-            Back
+            {/* Back */}
           </Button>
         }
       />
