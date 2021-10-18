@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
-import { Divider, Box, useMediaQuery, Button, ButtonGroup, FormControl, Select, MenuItem } from "@mui/material";
+import { Divider, Box, useMediaQuery, Button, FormControl, Select, MenuItem } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const theme = useTheme();
@@ -10,6 +11,8 @@ const Navigation = () => {
   const handleChange = (event) => {
     setPage(event.target.value);
   };
+
+  const buttonVariant = "text"
 
   return (
     <>
@@ -33,11 +36,17 @@ const Navigation = () => {
         alignItems: "center",
         justifyContent: "space-around"
       }}>
-        <Button size="large">Home</Button>
+        <Link to="/">
+          <Button size="large" variant={buttonVariant}>Home</Button>
+        </Link>
         <Divider orientation="vertical" flexItem />
-        <Button size="large">Gallery</Button>
+        <Link to="/gallery">
+          <Button size="large" variant={buttonVariant}>Gallery</Button>
+        </Link>
         <Divider orientation="vertical" flexItem />
-        <Button size="large">Contact Us</Button>
+        <Link to="/contact-us">
+          <Button size="large" variant={buttonVariant}>Contact Us</Button>
+        </Link>
       </Box>
       }
     </>
