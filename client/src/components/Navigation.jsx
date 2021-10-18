@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
-import { useMediaQuery, Button, ButtonGroup, FormControl, Select, MenuItem } from "@mui/material";
+import { Divider, Box, useMediaQuery, Button, ButtonGroup, FormControl, Select, MenuItem } from "@mui/material";
 
 const Navigation = () => {
   const theme = useTheme();
@@ -27,16 +27,18 @@ const Navigation = () => {
         </Select>
       </FormControl>
       :
-      <ButtonGroup
-        size={isSmall ? "small" : "large"}
-        variant="text"
-        aria-label="text button group"
-        color="primary"
-      >
-        <Button>Home</Button>
-        <Button>Gallery</Button>
-        <Button>Contact Us</Button>
-      </ButtonGroup>
+      <Box sx={{
+        flexGrow: "0.1",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-around"
+      }}>
+        <Button size="large">Home</Button>
+        <Divider orientation="vertical" flexItem />
+        <Button size="large">Gallery</Button>
+        <Divider orientation="vertical" flexItem />
+        <Button size="large">Contact Us</Button>
+      </Box>
       }
     </>
   )
