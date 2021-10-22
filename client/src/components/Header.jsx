@@ -1,7 +1,7 @@
 import React from "react";
 import { AppBar, Toolbar, Box, useTheme, useMediaQuery } from "@mui/material";
 
-import logo from "../assets/images/IMG_20211014_172013_181-removebg-preview.png";
+import logo from "../assets/images/blueprint-logo.png";
 
 import Navigation from "./Navigation";
 
