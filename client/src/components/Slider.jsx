@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useTheme, Box, MobileStepper, Paper, Typography, Button} from "@mui/material";
+import { useTheme, Box, MobileStepper, Button} from "@mui/material";
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import SwipeableViews from 'react-swipeable-views';
@@ -12,22 +12,22 @@ const images = [
   {
     label: 'Cars',
     imgPath:
-      'https://source.unsplash.com/1920x620/?cars',
+      'https://images.unsplash.com/photo-1516926401737-ba754884071a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80',
   },
   {
     label: 'Mechanics',
     imgPath:
-      'https://source.unsplash.com/1920x620/?mechanics',
+      'https://images.unsplash.com/photo-1516926401737-ba754884071a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80',
   },
   {
     label: 'Tesla',
     imgPath:
-      'https://source.unsplash.com/1920x620/?tesla',
+      'https://images.unsplash.com/photo-1496753480864-3e588e0269b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1834&q=80',
   },
   {
     label: 'Ferrari',
     imgPath:
-      'https://source.unsplash.com/1920x620/?ferrari',
+      'https://images.unsplash.com/photo-1591278169757-deac26e49555?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1738&q=80',
   },
 ];
 
@@ -62,16 +62,8 @@ function SwipeableTextMobileStepper() {
               <Box
                 component="img"
                 style={{
-                  display: 'flex',
-                  padding: '0%',
-                  margin: '0%',
-                  alignItems: 'center',
-                  overflow: 'hidden',
-                  backgroundColor: 'primary.light',
-                  '&:hover': {
-                    backgroundColor: 'primary.main',
-                      opacity: [0.9, 0.8, 0.7],
-                    }
+                  backgroundrepeat: 'no-repeat',
+                  width: '100vw',     
                 }}
                 src={step.imgPath}
                 alt={step.label}

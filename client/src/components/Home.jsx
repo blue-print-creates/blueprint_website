@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Card, CardActionArea, CardContent, CardMedia, Grid, Container, Button } from "@mui/material";
+import { Typography, Card, CardActionArea, CardContent, CardMedia, Grid, Container } from "@mui/material";
 import Slider from "./Slider"
 const cards = [1, 2, 3];
 // Home Page
@@ -12,7 +12,7 @@ const Home = () => {
     <div className="home">
       <div style={{ marginTop: '5px' }}>
         <div style={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px", marginBottom: "20px" }}>
-          <Slider />
+          <Slider/>
         </div>
       </div>
 
@@ -25,7 +25,7 @@ const Home = () => {
                   <CardMedia
                     component="img"
                     height="240"
-                    image="https://source.unsplash.com/1280x720/?lamborghini'"
+                    image="https://images.unsplash.com/photo-1561518776-e76a5e48f731?ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTd8MjkzNzQ3ODB8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=60"
                     alt="Cars"
                   />
                   <CardContent>
