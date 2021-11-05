@@ -61,9 +61,11 @@ function SwipeableTextMobileStepper() {
             {Math.abs(activeStep - index) <= 2 ? (
               <Box
                 component="img"
+                height={{lg: '75vh', md: '70vh', sm: '100%' }}
                 style={{
                   backgroundrepeat: 'no-repeat',
-                  width: '100vw',     
+                  width: '100%',    
+                  objectFit: 'contain'
                 }}
                 src={step.imgPath}
                 alt={step.label}
@@ -72,6 +74,7 @@ function SwipeableTextMobileStepper() {
           </div>
         ))}
       </AutoPlaySwipeableViews>
+
       <MobileStepper
         steps={maxSteps}
         position="static"
