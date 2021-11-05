@@ -8,11 +8,11 @@ import { Link } from "react-router-dom";
 const Navigation = () => {
   const theme = useTheme();
   const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
-  const [page, setPage] = React.useState('Home');
+  // const [page, setPage] = React.useState('Home');
 
-  const handleChange = (event) => {
-    setPage(event.target.value);
-  };
+  // const handleChange = (event) => {
+  //   setPage(event.target.value);
+  // };
 
   const buttonVariant = "text"
 
