@@ -11,12 +11,12 @@ const Header = () => {
 
   return (
     <>
-      <AppBar position="absolute" color="inherit" gutterBottom>
+      <AppBar position="fixed" color="inherit">
         <Toolbar variant="regular" sx={{ height: "15vh" }}>
           <Box>
             <img src={logo} alt="Logo" height={isSmall ? "40px" : "60px"} />
           </Box>
-          <Box sx={{ flexGrow: 0.8 }}></Box>
+          <Box sx={{ flexGrow: 0.9 }}></Box>
           <Navigation />
         </Toolbar>
       </AppBar>
