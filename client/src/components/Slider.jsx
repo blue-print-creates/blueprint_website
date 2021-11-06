@@ -10,24 +10,24 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
-    label: 'Cars',
+    label: 'Marve Tank by Time for Machine/Metal series',
     imgPath:
-      'https://images.unsplash.com/photo-1516926401737-ba754884071a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80',
+      'https://images.unsplash.com/photo-1587397717868-1c05d68bb8b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80',
   },
   {
-    label: 'Mechanics',
+    label: 'Male sports engineer designs tennis testing equipment',
     imgPath:
-      'https://images.unsplash.com/photo-1516926401737-ba754884071a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80',
+      'https://images.unsplash.com/photo-1581093806997-124204d9fa9d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
   },
   {
-    label: 'Tesla',
+    label: 'Female electronics engineer tests vehicle software with team',
     imgPath:
-      'https://images.unsplash.com/photo-1496753480864-3e588e0269b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1834&q=80',
+      'https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
   },
   {
-    label: 'Ferrari',
+    label: 'VW Camper Engine Bay',
     imgPath:
-      'https://images.unsplash.com/photo-1591278169757-deac26e49555?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1738&q=80',
+      'https://images.unsplash.com/photo-1519752594763-2633d8d4ea29?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80',
   },
 ];
 
@@ -65,7 +65,7 @@ function SwipeableTextMobileStepper() {
                 style={{
                   backgroundrepeat: 'no-repeat',
                   width: '100%',    
-                  objectFit: 'contain'
+                  objectFit: 'cover'
                 }}
                 src={step.imgPath}
                 alt={step.label}
