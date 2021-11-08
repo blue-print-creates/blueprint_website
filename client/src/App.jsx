@@ -12,9 +12,7 @@ import { Switch, Route } from 'react-router-dom';
 const App = () => {
   return (
     <div className="App">
-      <div className="header">
-        <Header />
-      </div>
+      <Header />
       <div className="main">
         <Switch>
           <Route exact path="/">
@@ -31,9 +29,7 @@ const App = () => {
           </Route>
         </Switch>
       </div>
-      <div className="footer">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   )
 }
