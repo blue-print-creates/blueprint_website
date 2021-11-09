@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import { Button, Box, Grid, Alert } from '@mui/material'
 import FormInput from "./FormInput";
 import FormErrorMessage from "./FormErrorMessage";
+import FormSuccessMessage from './FormSuccessMessage'
 
 const ContactUs = () => {
   const [values, setValues] = useState({
@@ -11,9 +12,15 @@ const ContactUs = () => {
     email: "",
     message: "",
   })
+
+  // Email Send Response
   const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  // For EmailJS
   const form = useRef();
 
+  // Different Text Fields
   const inputs = [
     {
       id: 1,
@@ -62,6 +69,13 @@ const ContactUs = () => {
 
     emailjs.sendForm(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, form.current, YOUR_USER_ID)
       .then((result) => {
+        setValues({
+          subject: "",
+          name: "",
+          email: "",
+          message: "",
+        });
+        setSuccess(true);
         console.log(result.text);
       }, (error) => {
         console.log(error.text);
@@ -90,6 +104,7 @@ const ContactUs = () => {
     <Box>
       <br />
       {error ? <FormErrorMessage setError={setError} /> : null}
+      {success ? <FormSuccessMessage setSuccess={setSuccess} /> : null}
       <br />
       <form noValidate ref={form} onSubmit={handleSubmit}>
         <Grid container spacing={3} justifyContent="center">
