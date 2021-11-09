@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material/styles';
 import { BrowserRouter } from 'react-router-dom';
-import { amber } from '@mui/material/colors';
-
 import App from './App';
 
 let theme = createTheme({

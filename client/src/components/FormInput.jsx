@@ -18,6 +18,7 @@ const FormInput = (props) => {
         multiline
         rows={rows}
         name={name}
+        value={value}
         size="medium"
         variant="outlined"
         label={label}
