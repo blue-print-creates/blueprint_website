@@ -8,11 +8,6 @@ import { Link } from "react-router-dom";
 const Navigation = () => {
   const theme = useTheme();
   const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
-  // const [page, setPage] = React.useState('Home');
-
-  // const handleChange = (event) => {
-  //   setPage(event.target.value);
-  // };
 
   const buttonVariant = "text"
 
@@ -58,15 +53,15 @@ const Navigation = () => {
           alignItems: "center",
           justifyContent: "space-around"
         }}>
-          <Link to="/">
+          <Link to="/" style={{ textDecoration: "none" }}>
             <Button size="large" variant={buttonVariant}>Home</Button>
           </Link>
           <Divider orientation="vertical" flexItem />
-          <Link to="/gallery">
+          <Link to="/gallery" style={{ textDecoration: "none" }}>
             <Button size="large" variant={buttonVariant}>Gallery</Button>
           </Link>
           <Divider orientation="vertical" flexItem />
-          <Link to="/contact-us">
+          <Link to="/contact-us" style={{ textDecoration: "none" }}>
             <Button size="large" variant={buttonVariant}>Contact Us</Button>
           </Link>
         </Box>
