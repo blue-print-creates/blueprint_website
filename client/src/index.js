@@ -13,7 +13,8 @@ let theme = createTheme({
     },
 
     secondary: {
-      main: "#FF8C00"
+      main: "#FF8C00",
+      contrastText: "#FFFFFF"
     },
   },
 });
