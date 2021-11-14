@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 const FormInput = (props) => {
   const [focussed, setFocussed] = useState(true);
-  const { id, label, name, rows, pattern, errorMessage, onChange, value, ...inputProps } = props;
+  const { label, name, rows, pattern, errorMessage, onChange, value } = props;
   const regex = new RegExp(pattern);
 
   const handleFocus = (e) => {

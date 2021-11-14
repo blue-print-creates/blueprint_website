@@ -8,9 +8,9 @@ import { Alert } from '@mui/material';
 const FormErrorMessage = ({ setError }) => {
   const [open, setOpen] = React.useState(true);
 
-  const handleClick = () => {
-    setOpen(true);
-  };
+  // const handleClick = () => {
+  //   setOpen(true);
+  // };
 
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {

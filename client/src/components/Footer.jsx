@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Container, Box, Paper, AppBar } from "@mui/material";
+import { Link, Container, Box, AppBar } from "@mui/material";
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import YouTubeIcon from '@mui/icons-material/YouTube';
@@ -13,7 +13,7 @@ const Footer = () => {
         color= "primary"
         position="relative"
       >
-        <Container maxwifth="lg">
+        <Container maxwidth="lg">
           <Box container spacing={5}>
             <Box item xs={12} sm={4} style={{ display: "flex", justifyContent: "center" }}>
               <Box style={{ padding: "20px" }}>
