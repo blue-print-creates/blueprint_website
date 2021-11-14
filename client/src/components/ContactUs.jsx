@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import emailjs from 'emailjs-com';
-import { Button, Box, Grid, Alert } from '@mui/material'
+import { Button, Box, Grid} from '@mui/material'
 import FormInput from "./FormInput";
 import FormErrorMessage from "./FormErrorMessage";
 import FormSuccessMessage from './FormSuccessMessage'
@@ -28,6 +28,7 @@ const ContactUs = () => {
       label: "Subject",
       rows: 1,
       errorMessage: "Shouldn't be empty.",
+      // eslint-disable-next-line no-useless-escape
       pattern: "^(?!\s*$).+",
     },
     {
@@ -44,6 +45,7 @@ const ContactUs = () => {
       label: "Email",
       rows: 1,
       errorMessage: "It should be a valid email.",
+      // eslint-disable-next-line no-useless-escape
       pattern: "^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
     },
     {
@@ -52,6 +54,7 @@ const ContactUs = () => {
       label: "Message",
       rows: 5,
       errorMessage: "Shouldn't be empty.",
+      // eslint-disable-next-line no-useless-escape
       pattern: "^(?!\s*$).+",
     },
   ]
@@ -86,6 +89,7 @@ const ContactUs = () => {
     e.preventDefault();
     let isError = false;
 
+    // eslint-disable-next-line array-callback-return
     inputs.map(input => {
       const regex = new RegExp(input.pattern);
 

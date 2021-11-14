@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Typography, Card, CardActionArea, CardContent, CardMedia, Grid, Container, Divider } from "@mui/material";
+import Gallery from "./Gallery"
+import { Box, Divider } from "@mui/material";
 import Slider from "./Slider"
 
 // Home Page
@@ -7,7 +8,7 @@ import Slider from "./Slider"
 // -Photo Slider
 // -Club Intro (Description)
 
-const cards = [1, 2, 3];
+//const cards = [1, 2, 3];
 
 const Home = () => {
   return (
@@ -15,7 +16,8 @@ const Home = () => {
       <Slider />
       <Divider />
       <br />
-      <Grid container alignItems="center" spacing={3} xs={12}>
+      <Gallery />
+      {/* <Grid container alignItems="center" spacing={3} xs={12}>
         {cards.map((card) => (
           <Grid item key={card} xs={12} sm={6} md={4}>
             <Card>
@@ -38,7 +40,7 @@ const Home = () => {
             </Card>
           </Grid>
         ))}
-      </Grid>
+      </Grid> */}
     </Box>
   )
 }
