@@ -15,7 +15,7 @@ const Home = () => {
       <Slider />
       <Divider />
       <br />
-      <Grid container alignItems="center" spacing={3} xs={12}>
+      <Grid style={{ marginLeft: "-14px"}} container spacing={3} xs={12}>
         {cards.map((card) => (
           <Grid item key={card} xs={12} sm={6} md={4}>
             <Card>
