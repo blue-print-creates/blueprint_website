@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = process.env.REACT_APP_API_KEY ;
+const API_KEY = "AIzaSyDQXdxiDwqkR8Kq1k7VPUF_QLIbvTs-5Ho";
 const API_URL = "https://www.googleapis.com/youtube/v3/playlistItems";
 
 export default axios.create({
