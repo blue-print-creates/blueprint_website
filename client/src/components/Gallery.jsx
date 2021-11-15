@@ -27,7 +27,7 @@ const Gallery = ({isHome}) => {
       setVideoIDArray(videoArray); 
     };
     getVideos();
-  }, [])
+  })
   
 
   return (
