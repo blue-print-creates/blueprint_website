@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Box, Typography, Card, CardActionArea, CardContent, Grid} from "@mui/material";
 import youtubeApi from '../api/youtube.js';
 
-const Gallery = () => {
+const Gallery = ({isHome}) => {
   const [videoIDArray, setVideoIDArray] = useState([
     {
       videoId: "",
@@ -14,16 +14,17 @@ const Gallery = () => {
   useEffect(() => {
     const getVideos = async keyword => {
       const response = await youtubeApi.get();
+      // console.log(response?.data?.items?.length);
       let videoArray = [];
       // eslint-disable-next-line array-callback-return
-      response?.data?.items.map((video, index) => {
+      response?.data?.items.slice(0, isHome ? 3 : response?.data?.items?.length).map((video, index) => {
         videoArray.push({
           videoId: video?.contentDetails?.videoId,
           title: video?.snippet?.title,
           description: video?.snippet?.description,
         })
       })
-      setVideoIDArray(videoArray);
+      setVideoIDArray(videoArray); 
     };
     getVideos();
   }, [])
