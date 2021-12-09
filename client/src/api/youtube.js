@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = "AIzaSyDXbe3gVwjYfLRttONKGu3Ot6JsVP-uuOw";
+const API_KEY = "PLrOFa8sDv6jfNxnFmp3N2bK0eqRkUPIxS";
 const API_URL = "https://www.googleapis.com/youtube/v3/playlistItems";
 
 export default axios.create({
