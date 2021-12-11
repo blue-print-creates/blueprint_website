@@ -8,7 +8,7 @@ export default axios.create({
   params: {
     part: 'snippet, contentDetails, id',
     maxResults: 12,
-    playlistId: "PLMC9KNkIncKtPzgY-5rmhvj7fax8fdxoj",
+    playlistId: "PLrOFa8sDv6jfNxnFmp3N2bK0eqRkUPIxS",
     key: API_KEY,
   },
   headers: {}
